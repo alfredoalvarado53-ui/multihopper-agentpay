@@ -8,10 +8,10 @@ on:
 
 jobs:
   link:
-    uses: codeswithroh/mergepay/.github/workflows/award.yml@refs/tags/v1
+    uses: codeswithroh/mergepay/.github/workflows/link.yml@v1
     permissions:
       id-token: write
     with:
       wallet: ${{ inputs.wallet }}
       contract: "0xcff79B144833b36ca53b310C1Ad7854AF9Ff9EeD"
-      relayer: 0x42Db35fa445588ee70b880676EF423d980421A42
+      relayer: https://mergepay.codeswithroh.workers.dev
