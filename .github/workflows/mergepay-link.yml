@@ -1,0 +1,17 @@
+name: MergePay link
+on:
+  workflow_dispatch:
+    inputs:
+      wallet:
+        description: Arc wallet to receive bounties
+        required: true
+
+jobs:
+  link:
+    uses: codeswithroh/mergepay/.github/workflows/award.yml@refs/tags/v1
+    permissions:
+      id-token: write
+    with:
+      wallet: ${{ inputs.wallet }}
+      contract: "0xcff79B144833b36ca53b310C1Ad7854AF9Ff9EeD"
+      relayer: 0x42Db35fa445588ee70b880676EF423d980421A42
